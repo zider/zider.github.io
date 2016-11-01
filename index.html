@@ -7,25 +7,36 @@
 	<link rel="stylesheet" href="http://www.runoob.com/wp-content/themes/runoob/style.css?v=1.02" type="text/css" media="all" />	
 	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/fontawesome/4.2.0/css/font-awesome.min.css" media="all" />	
 	<script src="http://cdn.static.runoob.com/libs/jquery/1.8.1/jquery.min.js"></script>
+	<script src="http://cdn.bootcss.com/blueimp-md5/1.1.0/js/md5.min.js"></script>  
 </head>
-<body style="background:all.jpg">
-<video width="432" height="240" controls preload>
-  <source src="movie.mp4" type="video/mp4">
-  <source src="movie.ogg" type="video/ogg">
-您的浏览器不支持Video标签。
-</video>
+<body>
 <br>
-<p>just for test!</p>
-<!--<img src="all.jpg" height="500" alt="jiajia's wedding"/>-->
+<div style="position: relative; left: 20%">
+	<img src="all.jpg" width="300" alt="jiajia's wedding"/>
+</div>
+<br>
 hello you!
 <br>
-<input type="text" id="password" alt="say something"/>
+<div style="position: relative; left: 20%">
+<input type="text" id="pwdText" alt="say something" value="our password"/>
 <button id="btn" type="button">PassWord</button>
 <a href="two.html" hidden>跳转测试 不要点</a>
 <script>
 	$("#btn").click(function(){
-		$("a").show();
+		var md = md5($("#pwdText").val());
+		alert(md);
+		if (md === '5cd04491485d7c621f658c21c01919e1'){
+			$("#m").show();
+		}
 	});
 </script>
+</div>
+<div id="m" style="position: relative; left: 20%" hidden>
+<video width="600" controls preload>
+  <source src="movie.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+您的浏览器不支持Video标签。
+</video>
+</div>
 </body>
 </html>

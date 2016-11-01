@@ -8,13 +8,17 @@
 </head>
 <body>
 <br>
-<div style="position: relative; left: 20%">
+<div id="all" style="position: relative; left: 20%">
 	<img src="all.jpg" width="300" alt="jiajia's wedding"/>
 </div>
-<br>
-hello you!
+<div id="zzqf" style="position: relative; left: 20%" hidden>
+	<img src="zzqf.jpg" width="260" alt="ZZ & QF"/>
+</div>
 <br>
 <div style="position: relative; left: 20%">
+<br>
+hello you guys!
+<br>
 <input type="text" id="pwdText" alt="say something" value="our password"/>
 <button id="btn" type="button">PassWord</button>
 <a href="two.html" hidden>跳转测试 不要点</a>
@@ -24,11 +28,15 @@ hello you!
 		var md = md5($("#pwdText").val());
 		if (md === '5cd04491485d7c621f658c21c01919e1'){
 			$("#m").show();
+			$("#all").hide();
+			$("#zzqf").show();
 		}
 	});
 </script>
 </div>
 <div id="m" style="position: relative; left: 20%" hidden>
+<div><hr>2014 Yu Lin @ Our Memory</hr></div>
+<br><br>
 <video width="600" controls preload>
   <source src="movie.mp4" type="video/mp4">
 您的浏览器不支持Video标签。

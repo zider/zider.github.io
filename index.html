@@ -30,6 +30,11 @@ hello you!
 	});*/
 	function hi(){
 		alert('hi');
+		var md = md5($("#pwdText").val());
+		alert(md);
+		if (md === '5cd04491485d7c621f658c21c01919e1'){
+			$("#m").show();
+		}
 	}
 </script>
 </div>
